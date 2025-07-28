@@ -21,10 +21,6 @@ const Card = ({ restaurant }) => {
   }
 
   const displayRating = () => {
-    if (!isSignedIn) {
-      document.getElementById('clerk-sign-in').click()
-      return
-    }
 
     navigate(`/restaurants/${restaurant._id}`)
   }
