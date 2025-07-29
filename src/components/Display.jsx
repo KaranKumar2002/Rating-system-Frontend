@@ -15,7 +15,9 @@ const Display = ({ userInput }) => {
         const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/admin/getAllRestaurants`, {
           method: 'GET',
           credentials: 'include',
-          headers: { 'Content-Type': 'application/json' },
+          headers: {
+            'Content-Type': 'application/json',
+          },
         });
         if (!res.ok) throw new Error('Failed to fetch restaurants');
         const data = await res.json();
