@@ -25,7 +25,6 @@ function CardDetail() {
       // Replace with your real API endpoint.
       const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/users/getreview/${id}`, {
         method: "GET",
-        credentials: "include",
         headers: {
           "Content-Type": "application/json",
         },
